@@ -31,8 +31,7 @@ function [out_sig, peak_locs_final] = SEHT(signal,fs)
     % apply moving average filter to remove low frequency drift
     N = 900;
     ma_filter = (1/N)*ones(1,N);
-    ma_out = conv(ht,ma_filter,'same');
-%     ma_out = filter(ma_filter,1,ht);
+    ma_out = filter(ma_filter,1,ht);
     zn = ht - ma_out;
     % odd-symmetry function, find the zero cross points
     peak_locs_temp = [];
