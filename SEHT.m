@@ -12,7 +12,7 @@ function [out_sig, peak_locs_final] = SEHT(signal,fs)
     % first order differentiation
     d_n = f_signal(2:end)-f_signal(1:end-1);
     % normalize the signal
-    norm_dn = abs(d_n)/max(abs(d_n));
+    norm_dn = d_n/max(abs(d_n));
     % implementation from shannon energy envelope
     se_n = (-1)*(norm_dn.^2).*log(norm_dn.^2);
     % apply triangle filter: implementation from An R-peak detection method
