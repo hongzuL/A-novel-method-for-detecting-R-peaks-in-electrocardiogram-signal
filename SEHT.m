@@ -37,7 +37,7 @@ function [out_sig, peak_locs_final] = SEHT(signal,fs)
     peak_locs_temp = [];
     for t = 2:length(zn)-1
         if zn(t-1) <= 0 && zn(t+1) >= 0
-            if ismember(zn(t-1),peak_locs_temp) == 0
+            if ismember(t-1,peak_locs_temp) == 0
                 peak_locs_temp = [peak_locs_temp, t];
             end
         end

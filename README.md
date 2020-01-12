@@ -6,6 +6,6 @@
 	The coding was done using Matlab 2018a.
 	A main function for loading the MIT-BIH database is required.
 	The performance on MIT-BIH Arrythmia Database: 
-		TP: 109207/109966
-		FP: 134
-		TN: 759
+		TP: 109207/109494
+		FP: 121
+		TN: 287
