@@ -42,7 +42,8 @@ function [out_sig, peak_locs_final] = SEHT(signal,fs)
             end
         end
     end
-    peak_locs_final = real_r_peak_detection_loop(f_signal,fs,peak_locs_temp, 25);
+    thresh = 25
+    peak_locs_final = real_r_peak_detection(signal,fs, peak_locs_temp, thresh)
     out_sig = zn;
 %% plot for debug
 %     figure,
