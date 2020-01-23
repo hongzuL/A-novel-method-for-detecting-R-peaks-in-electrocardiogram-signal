@@ -45,26 +45,3 @@ function [out_sig, peak_locs_final] = SEHT(signal,fs)
     thresh = 25
     peak_locs_final = real_r_peak_detection(signal,fs, peak_locs_temp, thresh)
     out_sig = zn;
-%% plot for debug
-%     figure,
-%     subplot(7,1,1)
-%     plot(signal)
-%     subplot(7,1,2)
-%     plot(f_signal)
-%     subplot(7,1,3)
-%     plot(norm_dn)
-%     subplot(7,1,4)
-%     plot(se_n)
-%     subplot(7,1,5)
-%     plot(see)
-%     subplot(7,1,6)
-%     plot(ht)
-%     y = zeros(1,length(ht));
-%     hold on
-%     plot(y)
-%     hold off
-%     subplot(7,1,7)
-%     plot(zn)
-%     hold on
-%     plot(y)
-%     hold off

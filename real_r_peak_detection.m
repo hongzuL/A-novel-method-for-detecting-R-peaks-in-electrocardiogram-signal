@@ -25,7 +25,3 @@ function peak_locs_final=real_r_peak_detection(signal,fs, peak_locs_temp, thresh
             end
         end
     end
-    % check the final peak list if they are within thresh sample range, join
-    % the two peaks
-    % this is not in the original paper, added my self
-    % peak_locs_final = join_r_peaks_loop(signal,fs, peak_locs_final, thresh);
